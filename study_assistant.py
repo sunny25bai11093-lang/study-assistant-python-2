@@ -23,7 +23,7 @@ def display_tasks():
 def total_hours():
     print("Total study hours =", sum(t["hours"] for t in tasks), "\n")
 #head
-
+#tomnjerrty
 
 def max_task():
     if not tasks:
@@ -31,7 +31,7 @@ def max_task():
         return
     t = max(tasks, key=lambda x: x["hours"])
     print("Task requiring most time:", t, "\n")
-
+#humanise
 def remove_duplicates():
     unique = []
     for t in tasks:
@@ -44,7 +44,7 @@ def remove_duplicates():
 def sort_priority():
     tasks.sort(key=lambda t: t["priority"])
     print("Tasks sorted by priority.\n")
-
+#love is code
 def motivate():
     import random
     msgs = [
@@ -53,7 +53,7 @@ def motivate():
         "Stay focused and win!"
     ]
     print(random.choice(msgs), "\n")
-
+#tail and head
 def menu():
     while True:
         print("1. Add Task")
@@ -81,4 +81,5 @@ def menu():
             print("Invalid choice.\n")
 
 menu()
+
 
