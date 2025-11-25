@@ -1,85 +1,41 @@
-# studyyy-assistant-python-aimer
-A Python study-assistant aimer app uses all the features given in my syllabus and it helps students in managing daily to do list and aim to productivity for them
-tasks = []
-#make a function with parameters
-def add_task():
-    subject = input("Enter subject: ")
-    topic = input("Enter topic: ")
-    hours = float(input("Enter estimated hours: "))
-    priority = int(input("Enter priority (1=High, 2=Medium, 3=Low): "))
+📚 studyyy-assistant-python-aimer
 
-    task = {"subject": subject, "topic": topic, "hours": hours, "priority": priority} 
+A simple Python-based study assistant that helps students organize tasks, manage study hours, prioritize work, and stay motivated.
 
-    tasks.append(task)
-    print("Task added!\n")
-#define one more function
-def display_tasks():
-    if not tasks:
-        print("No tasks yet.\n")
-        return
-    print("\n--- All Tasks ---")
-    for i, t in enumerate(tasks, start=1):
-        print(f"{i}. {t['subject']} - {t['topic']} | Hours: {t['hours']} | Priority: {t['priority']}")
-    print()
-#write third function
-def total_hours():
-    print("Total study hours =", sum(t["hours"] for t in tasks), "\n")
-#head
+This mini-app includes all the features from your syllabus such as functions, lists, loops, conditionals, sorting, duplicate removal, and more — making it a perfect learning + productivity tool.
 
+🚀 Features
 
-def max_task():
-    if not tasks:
-        print("No tasks yet.\n")
-        return
-    t = max(tasks, key=lambda x: x["hours"])
-    print("Task requiring most time:", t, "\n")
+📝 Add Study Tasks (subject, topic, hours, priority)
 
-def remove_duplicates():
-    unique = []
-    for t in tasks:
-        if t not in unique:
-            unique.append(t)
-    tasks.clear()
-    tasks.extend(unique)
-    print("Duplicates removed.\n")
+📋 View All Tasks
 
-def sort_priority():
-    tasks.sort(key=lambda t: t["priority"])
-    print("Tasks sorted by priority.\n")
+⏱️ Calculate Total Study Hours
 
-def motivate():
-    import random
-    msgs = [
-        "Keep going!", 
-        "You got this!", 
-        "Stay focused and win!"
-    ]
-    print(random.choice(msgs), "\n")
+🔝 Find Task Requiring Maximum Time
 
-def menu():
-    while True:
-        print("1. Add Task")
-        print("2. View Tasks")
-        print("3. Total Hours")
-        print("4. Task with Maximum Time")
-        print("5. Remove Duplicates")
-        print("6. Sort by Priority")
-        print("7. Motivational Message")
-        print("8. Exit")
+🧹 Remove Duplicate Tasks
 
-        ch = input("Enter choice: ")
+🔽 Sort Tasks by Priority
 
-        if ch == "1": add_task()
-        elif ch == "2": display_tasks()
-        elif ch == "3": total_hours()
-        elif ch == "4": max_task()
-        elif ch == "5": remove_duplicates()
-        elif ch == "6": sort_priority()
-        elif ch == "7": motivate()
-        elif ch == "8":
-            print("Goodbye!")
-            break
-        else:
-            print("Invalid choice.\n")
+💬 Random Motivational Messages
 
-menu()
+💻 Interactive Menu System
+
+🧠 Priority Levels
+
+1 = High
+
+2 = Medium
+
+3 = Low
+
+📦 How to Run
+
+Install Python (if not installed).
+
+Save the script as study_assistant.py.
+
+Run:
+
+python study_assistant.py
