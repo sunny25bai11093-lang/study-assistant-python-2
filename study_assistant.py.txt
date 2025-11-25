@@ -1,15 +1,16 @@
 tasks = []
-
+#make a function with parameters
 def add_task():
     subject = input("Enter subject: ")
     topic = input("Enter topic: ")
     hours = float(input("Enter estimated hours: "))
     priority = int(input("Enter priority (1=High, 2=Medium, 3=Low): "))
 
-    task = {"subject": subject, "topic": topic, "hours": hours, "priority": priority}
+    task = {"subject": subject, "topic": topic, "hours": hours, "priority": priority} 
+
     tasks.append(task)
     print("Task added!\n")
-
+#define one more function
 def display_tasks():
     if not tasks:
         print("No tasks yet.\n")
@@ -18,9 +19,11 @@ def display_tasks():
     for i, t in enumerate(tasks, start=1):
         print(f"{i}. {t['subject']} - {t['topic']} | Hours: {t['hours']} | Priority: {t['priority']}")
     print()
-
+#write third function
 def total_hours():
     print("Total study hours =", sum(t["hours"] for t in tasks), "\n")
+#head
+
 
 def max_task():
     if not tasks:
@@ -78,3 +81,4 @@ def menu():
             print("Invalid choice.\n")
 
 menu()
+
